@@ -17,20 +17,18 @@ Download from [releases](https://github.com/nabeken/go-check-smtp/releases).
 Or
 
 ```sh
-go get -u github.com/nabeken/go-check-smtp/check_smtp
+go get -u github.com/nabeken/go-check-smtp
 ```
 
 ## Usage
 
 ```sh
-check_smtp -S \
+go-check-smtp -S \
   -F localhost \
   -H 127.0.0.1 \
   -p 10025 \
   -w 2.0 \
   -c 1.0 \
-  -C 'MAIL FROM:<sender@example.com>' \
-  -R '250 2.1.0 Ok' \
-  -C 'RCPT TO:<recipient@example.com>' \
-  -R '250 2.1.5 Ok'
+  -f sender@example.com \
+  -r recipient@example.com
 ```

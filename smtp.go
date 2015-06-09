@@ -1,14 +1,18 @@
 package main
 
 import (
-	"fmt"
+	"crypto/tls"
 	"net/smtp"
 	"os"
 	"time"
 
-	"github.com/fractalcat/nagiosplugin"
 	"github.com/jessevdk/go-flags"
+	"github.com/nabeken/nagiosplugin"
 )
+
+var tlsConfig = &tls.Config{
+	InsecureSkipVerify: true,
+}
 
 var opts struct {
 	StartTLS bool          `short:"S" long:"starttls" description:"use STARTTLS" default:"false"`
@@ -17,36 +21,56 @@ var opts struct {
 	Port     string        `short:"p" long:"port" description:"port number" default:"25"`
 	Warning  time.Duration `short:"w" long:"warning" description:"response time to result in warning"`
 	Critical time.Duration `short:"c" long:"critical" description:"response time to result in critical"`
+
+	MailFrom string `short:"f" long:"from" description:"sender"`
+	RcptTo   string `short:"r" long:"recipient" description:"recipient"`
 }
 
 func main() {
 	if _, err := flags.Parse(&opts); err != nil {
 		os.Exit(1)
 	}
-	check := nagiosplugin.NewCheck()
+
+	check := nagiosplugin.NewCheck("SMTP")
 	defer check.Finish()
 
 	start := time.Now()
 	c, err := smtp.Dial(opts.Host + ":" + opts.Port)
 	if err != nil {
 		check.Criticalf("failed to connect to SMTP server: %s", err)
-		return
 	}
-	d := time.Since(start)
-
 	defer c.Quit()
 
 	if err := c.Hello(opts.FQDN); err != nil {
 		check.Criticalf("failed to say hello: %s", err)
-		return
 	}
 
+	if opts.StartTLS {
+		if err := c.StartTLS(tlsConfig); err != nil {
+			check.Criticalf("failed to establish TLS connection: %s", err)
+		}
+	}
+
+	// measure response time including STARTTLS procedure
+	d := time.Since(start)
+	if opts.Warning > 0 && d.Nanoseconds() > opts.Warning.Nanoseconds() {
+		check.AddResultf(nagiosplugin.WARNING, "%s response time", d)
+	}
 	if opts.Critical > 0 && d.Nanoseconds() > opts.Critical.Nanoseconds() {
-		check.Criticalf("SMTP: %s response time", d)
-		return
+		check.AddResultf(nagiosplugin.CRITICAL, "%s response time", d)
 	}
 
-	check.AddResultf(nagiosplugin.OK, "SMTP: %s response time", d)
+	check.AddResultf(nagiosplugin.OK, "%s response time", d)
 
-	fmt.Println("?")
+	if f := opts.MailFrom; f != "" {
+		if err := c.Mail(f); err != nil {
+			check.Criticalf("MAIL command was not accepted: %s", err)
+		}
+	}
+
+	if r := opts.RcptTo; r != "" {
+		if err := c.Rcpt(r); err != nil {
+			check.Criticalf("RCPT command was not accepted: %s", err)
+		}
+	}
 }
