@@ -23,7 +23,9 @@ go get -u github.com/nabeken/go-check-smtp
 ## Usage
 
 ```sh
-go-check-smtp -S \
+go-check-smtp \
+  -P \
+  -S \
   -F localhost \
   -H 127.0.0.1 \
   -p 10025 \

@@ -15,15 +15,15 @@ var tlsConfig = &tls.Config{
 }
 
 var opts struct {
-	StartTLS bool          `short:"S" long:"starttls" description:"use STARTTLS" default:"false"`
-	FQDN     string        `short:"F" long:"fqdn" description:"FQDN for HELO" default:"localhost"`
-	Host     string        `short:"H" long:"hostname" description:"host name" required:"true"`
-	Port     string        `short:"p" long:"port" description:"port number" default:"25"`
-	Warning  time.Duration `short:"w" long:"warning" description:"response time to result in warning"`
-	Critical time.Duration `short:"c" long:"critical" description:"response time to result in critical"`
-
-	MailFrom string `short:"f" long:"from" description:"sender"`
-	RcptTo   string `short:"r" long:"recipient" description:"recipient"`
+	ProxyProto bool          `short:"P" long:"proxyproto" description:"use ProxyProtocol" default:"false"`
+	StartTLS   bool          `short:"S" long:"starttls" description:"use STARTTLS" default:"false"`
+	FQDN       string        `short:"F" long:"fqdn" description:"FQDN for HELO" default:"localhost"`
+	Host       string        `short:"H" long:"hostname" description:"host name" required:"true"`
+	Port       string        `short:"p" long:"port" description:"port number" default:"25"`
+	Warning    time.Duration `short:"w" long:"warning" description:"response time to result in warning"`
+	Critical   time.Duration `short:"c" long:"critical" description:"response time to result in critical"`
+	MailFrom   string        `short:"f" long:"from" description:"sender"`
+	RcptTo     string        `short:"r" long:"recipient" description:"recipient"`
 }
 
 func main() {
