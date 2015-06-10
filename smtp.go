@@ -2,6 +2,8 @@ package main
 
 import (
 	"crypto/tls"
+	"fmt"
+	"net"
 	"net/smtp"
 	"os"
 	"time"
@@ -24,6 +26,7 @@ var opts struct {
 	Critical   time.Duration `short:"c" long:"critical" description:"response time to result in critical"`
 	MailFrom   string        `short:"f" long:"from" description:"sender"`
 	RcptTo     string        `short:"r" long:"recipient" description:"recipient"`
+	Verbose    bool          `short:"v" long:"verbose" description:"verbose output for debugging"`
 }
 
 func main() {
@@ -35,7 +38,20 @@ func main() {
 	defer check.Finish()
 
 	start := time.Now()
-	c, err := smtp.Dial(opts.Host + ":" + opts.Port)
+	conn, err := net.Dial("tcp", opts.Host+":"+opts.Port)
+	if err != nil {
+		check.Criticalf("failed to connect to SMTP server: %s", err)
+	}
+
+	if opts.Verbose {
+		fmt.Println(conn.LocalAddr(), conn.RemoteAddr())
+	}
+
+	if opts.ProxyProto {
+		conn = &ProxyConn{Conn: conn}
+	}
+
+	c, err := smtp.NewClient(conn, "")
 	if err != nil {
 		check.Criticalf("failed to connect to SMTP server: %s", err)
 	}
