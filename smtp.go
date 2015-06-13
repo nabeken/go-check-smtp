@@ -17,16 +17,22 @@ var tlsConfig = &tls.Config{
 }
 
 var opts struct {
-	ProxyProto bool          `short:"P" long:"proxyproto" description:"use ProxyProtocol" default:"false"`
-	StartTLS   bool          `short:"S" long:"starttls" description:"use STARTTLS" default:"false"`
-	FQDN       string        `short:"F" long:"fqdn" description:"FQDN for HELO" default:"localhost"`
-	Host       string        `short:"H" long:"hostname" description:"host name" required:"true"`
-	Port       string        `short:"p" long:"port" description:"port number" default:"25"`
-	Warning    time.Duration `short:"w" long:"warning" description:"response time to result in warning"`
-	Critical   time.Duration `short:"c" long:"critical" description:"response time to result in critical"`
-	MailFrom   string        `short:"f" long:"from" description:"sender"`
-	RcptTo     string        `short:"r" long:"recipient" description:"recipient"`
-	Verbose    bool          `short:"v" long:"verbose" description:"verbose output for debugging"`
+	FQDN string `short:"F" long:"fqdn" description:"FQDN for HELO" default:"localhost"`
+	Host string `short:"H" long:"hostname" description:"host name" required:"true"`
+	Port string `short:"p" long:"port" description:"port number" default:"25"`
+
+	MailFrom string `short:"f" long:"from" description:"sender"`
+	RcptTo   string `short:"r" long:"recipient" description:"recipient"`
+
+	Warning  time.Duration `short:"w" long:"warning" description:"response time to result in warning"`
+	Critical time.Duration `short:"c" long:"critical" description:"response time to result in critical"`
+
+	ProxyProto bool `short:"P" long:"proxyproto" description:"use ProxyProtocol" default:"false"`
+	StartTLS   bool `short:"S" long:"starttls" description:"use STARTTLS" default:"false"`
+
+	Timeout time.Duration `short:"t" long:"timeout" description:"connection times out" default:"10s"`
+
+	Verbose bool `short:"v" long:"verbose" description:"verbose output for debugging"`
 }
 
 func main() {
@@ -38,7 +44,7 @@ func main() {
 	defer check.Finish()
 
 	start := time.Now()
-	conn, err := net.Dial("tcp", opts.Host+":"+opts.Port)
+	conn, err := net.DialTimeout("tcp", opts.Host+":"+opts.Port, opts.Timeout)
 	if err != nil {
 		check.Criticalf("failed to connect to SMTP server: %s", err)
 	}
@@ -50,6 +56,8 @@ func main() {
 	if opts.ProxyProto {
 		conn = &ProxyConn{Conn: conn}
 	}
+	defer conn.Close()
+	conn.SetDeadline(time.Now().Add(opts.Timeout))
 
 	c, err := smtp.NewClient(conn, "")
 	if err != nil {
