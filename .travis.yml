@@ -10,6 +10,7 @@ script:
   - go test -v ./...
 
 before_deploy:
+  - goxc -t -bc="freebsd,amd64 linux,amd64 windows,386 darwin,amd64"
   - goxc -tasks='xc archive' -bc="freebsd,amd64 linux,amd64 windows,386 darwin,amd64"
 
 deploy:
