@@ -27,6 +27,9 @@ var opts struct {
 	Warning  time.Duration `short:"w" long:"warning" description:"response time to result in warning"`
 	Critical time.Duration `short:"c" long:"critical" description:"response time to result in critical"`
 
+	CertWarn int `long:"cert-warn" description:"number of days a certificate has to be valid."`
+	CertCrit int `long:"cert-crit" description:"number of days a certificate has to be valid."`
+
 	ProxyProto bool `short:"P" long:"proxyproto" description:"use ProxyProtocol" default:"false"`
 	StartTLS   bool `short:"S" long:"starttls" description:"use STARTTLS" default:"false"`
 
@@ -95,6 +98,28 @@ func main() {
 	if r := opts.RcptTo; r != "" {
 		if err := c.Rcpt(r); err != nil {
 			check.Criticalf("RCPT command was not accepted: %s", err)
+		}
+	}
+
+	// Check a valid date in TLS certificate
+	if opts.StartTLS && (opts.CertWarn > 0 || opts.CertCrit > 0) {
+		if tlsState, ok := c.TLSConnectionState(); !ok {
+			check.AddResultf(nagiosplugin.WARNING, "TLS state is not available")
+		} else {
+			now := time.Now()
+			certStatus := "certificate '%s' expires in %d day(s) (%s)"
+			for _, cert := range tlsState.PeerCertificates {
+				warnNow := cert.NotAfter.AddDate(0, 0, -1*opts.CertWarn)
+				critNow := cert.NotAfter.AddDate(0, 0, -1*opts.CertCrit)
+				days := cert.NotAfter.Sub(now) / (24 * time.Hour)
+				if now.After(warnNow) {
+					check.AddResultf(nagiosplugin.WARNING, certStatus, cert.Subject.CommonName, days, cert.NotAfter)
+				}
+				if now.After(critNow) {
+					check.AddResultf(nagiosplugin.CRITICAL, certStatus, cert.Subject.CommonName, days, cert.NotAfter)
+				}
+				check.AddResultf(nagiosplugin.OK, certStatus, cert.Subject.CommonName, days, cert.NotAfter)
+			}
 		}
 	}
 }
