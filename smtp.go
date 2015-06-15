@@ -4,11 +4,11 @@ import (
 	"crypto/tls"
 	"fmt"
 	"net"
-	"net/smtp"
 	"os"
 	"time"
 
 	"github.com/jessevdk/go-flags"
+	"github.com/nabeken/go-check-smtp/net/smtp"
 	"github.com/nabeken/nagiosplugin"
 )
 
