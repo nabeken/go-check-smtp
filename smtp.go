@@ -4,11 +4,11 @@ import (
 	"crypto/tls"
 	"fmt"
 	"net"
+	"net/smtp"
 	"os"
 	"time"
 
 	"github.com/jessevdk/go-flags"
-	"github.com/nabeken/go-check-smtp/net/smtp"
 	"github.com/nabeken/nagiosplugin"
 )
 
@@ -30,8 +30,8 @@ var opts struct {
 	CertWarn int `long:"cert-warn" description:"number of days a certificate has to be valid."`
 	CertCrit int `long:"cert-crit" description:"number of days a certificate has to be valid."`
 
-	ProxyProto bool `short:"P" long:"proxyproto" description:"use ProxyProtocol" default:"false"`
-	StartTLS   bool `short:"S" long:"starttls" description:"use STARTTLS" default:"false"`
+	ProxyProto bool `short:"P" long:"proxyproto" description:"use ProxyProtocol"`
+	StartTLS   bool `short:"S" long:"starttls" description:"use STARTTLS"`
 
 	Timeout time.Duration `short:"t" long:"timeout" description:"connection times out" default:"10s"`
 
@@ -40,7 +40,11 @@ var opts struct {
 
 func main() {
 	if _, err := flags.Parse(&opts); err != nil {
-		os.Exit(1)
+		if flagsErr, ok := err.(*flags.Error); ok && flagsErr.Type == flags.ErrHelp {
+			os.Exit(0)
+		} else {
+			panic(err)
+		}
 	}
 
 	check := nagiosplugin.NewCheck("SMTP")
