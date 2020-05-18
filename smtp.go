@@ -33,6 +33,9 @@ var opts struct {
 	ProxyProto bool `short:"P" long:"proxyproto" description:"use ProxyProtocol"`
 	StartTLS   bool `short:"S" long:"starttls" description:"use STARTTLS"`
 
+	// When the TLS verion is lower than this, the status will be warning.
+	MinimumTLSVersion string `long:"minimum-tls-version" description:"minimum TLS version (e.g. 1.2)"`
+
 	Timeout time.Duration `short:"t" long:"timeout" description:"connection times out" default:"10s"`
 
 	Verbose bool `short:"v" long:"verbose" description:"verbose output for debugging"`
@@ -105,11 +108,31 @@ func main() {
 		}
 	}
 
-	// Check a valid date in TLS certificate
+	// Check a valid date in TLS certificate and the TLS version
 	if opts.StartTLS && (opts.CertWarn > 0 || opts.CertCrit > 0) {
 		if tlsState, ok := c.TLSConnectionState(); !ok {
 			check.AddResultf(nagiosplugin.WARNING, "TLS state is not available")
 		} else {
+			if minTLSVer := opts.MinimumTLSVersion; minTLSVer != "" {
+				tlsStatus := fmt.Sprintf(
+					"%s >= %s (%s)",
+					printTLSState(tlsState),
+					minTLSVer,
+					tls.CipherSuiteName(tlsState.CipherSuite),
+				)
+
+				v := convertToTLSVersion(minTLSVer)
+				if tlsState.Version >= v {
+					check.AddResult(nagiosplugin.OK, tlsStatus)
+				} else {
+					check.AddResult(nagiosplugin.WARNING, tlsStatus)
+				}
+
+				if opts.Verbose {
+					fmt.Println(tlsStatus)
+				}
+			}
+
 			now := time.Now()
 			certStatus := "certificate '%s' expires in %d day(s) (%s)"
 			for _, cert := range tlsState.PeerCertificates {
@@ -125,5 +148,35 @@ func main() {
 				check.AddResultf(nagiosplugin.OK, certStatus, cert.Subject.CommonName, days, cert.NotAfter)
 			}
 		}
+	}
+}
+
+func convertToTLSVersion(ver string) uint16 {
+	switch ver {
+	case "1.0":
+		return tls.VersionTLS10
+	case "1.1":
+		return tls.VersionTLS11
+	case "1.2":
+		return tls.VersionTLS12
+	case "1.3":
+		return tls.VersionTLS13
+	default:
+		panic("unknown TLS version")
+	}
+}
+
+func printTLSState(tlsState tls.ConnectionState) string {
+	switch tlsState.Version {
+	case tls.VersionTLS10:
+		return "TLS 1.0"
+	case tls.VersionTLS11:
+		return "TLS 1.1"
+	case tls.VersionTLS12:
+		return "TLS 1.2"
+	case tls.VersionTLS13:
+		return "TLS 1.3"
+	default:
+		return "unknown"
 	}
 }
