@@ -34,7 +34,7 @@ jobs:
       run: ls -alh snapshot
 
     - name: Release
-      uses: technote-space/action-gh-release@v2
+      uses: softprops/action-gh-release@v1
       with:
         files: |
           snapshot/go-check-smtp_*.zip
