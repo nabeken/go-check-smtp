@@ -38,5 +38,6 @@ jobs:
       with:
         files: |
           snapshot/go-check-smtp_*.zip
+          snapshot/go-check-smtp_*.tar.gz
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
