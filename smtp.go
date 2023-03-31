@@ -133,10 +133,10 @@ func main() {
 				}
 			}
 
-			now := time.Now()
-			certStatus := "certificate '%s' expires in %d day(s) (%s)"
-
 			if opts.CertWarn > 0 || opts.CertCrit > 0 {
+				now := time.Now()
+				certStatus := "certificate '%s' expires in %d day(s) (%s)"
+
 				for _, cert := range tlsState.PeerCertificates {
 					warnNow := cert.NotAfter.AddDate(0, 0, -1*opts.CertWarn)
 					critNow := cert.NotAfter.AddDate(0, 0, -1*opts.CertCrit)
