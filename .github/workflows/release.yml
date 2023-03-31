@@ -26,18 +26,10 @@ jobs:
       run: |
         go get -v -t -d ./...
 
-    - name: Build release binaries
-      run: |
-        goxc -tasks='xc archive' -bc="freebsd,amd64 linux,amd64 windows,386 darwin,amd64" -d .
-
-    - name: Show binaries
-      run: ls -alh snapshot
-
-    - name: Release
-      uses: softprops/action-gh-release@v1
+    - name: Run GoReleaser
+      uses: goreleaser/goreleaser-action@v3
       with:
-        files: |
-          snapshot/go-check-smtp_*.zip
-          snapshot/go-check-smtp_*.tar.gz
+        version: latest
+        args: release --rm-dist
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
