@@ -109,7 +109,7 @@ func main() {
 	}
 
 	// Check a valid date in TLS certificate and the TLS version
-	if opts.StartTLS && (opts.CertWarn > 0 || opts.CertCrit > 0) {
+	if opts.StartTLS {
 		if tlsState, ok := c.TLSConnectionState(); !ok {
 			check.AddResultf(nagiosplugin.WARNING, "TLS state is not available")
 		} else {
@@ -133,19 +133,22 @@ func main() {
 				}
 			}
 
-			now := time.Now()
-			certStatus := "certificate '%s' expires in %d day(s) (%s)"
-			for _, cert := range tlsState.PeerCertificates {
-				warnNow := cert.NotAfter.AddDate(0, 0, -1*opts.CertWarn)
-				critNow := cert.NotAfter.AddDate(0, 0, -1*opts.CertCrit)
-				days := cert.NotAfter.Sub(now) / (24 * time.Hour)
-				if now.After(warnNow) {
-					check.AddResultf(nagiosplugin.WARNING, certStatus, cert.Subject.CommonName, days, cert.NotAfter)
+			if opts.CertWarn > 0 || opts.CertCrit > 0 {
+				now := time.Now()
+				certStatus := "certificate '%s' expires in %d day(s) (%s)"
+
+				for _, cert := range tlsState.PeerCertificates {
+					warnNow := cert.NotAfter.AddDate(0, 0, -1*opts.CertWarn)
+					critNow := cert.NotAfter.AddDate(0, 0, -1*opts.CertCrit)
+					days := cert.NotAfter.Sub(now) / (24 * time.Hour)
+					if now.After(warnNow) {
+						check.AddResultf(nagiosplugin.WARNING, certStatus, cert.Subject.CommonName, days, cert.NotAfter)
+					}
+					if now.After(critNow) {
+						check.AddResultf(nagiosplugin.CRITICAL, certStatus, cert.Subject.CommonName, days, cert.NotAfter)
+					}
+					check.AddResultf(nagiosplugin.OK, certStatus, cert.Subject.CommonName, days, cert.NotAfter)
 				}
-				if now.After(critNow) {
-					check.AddResultf(nagiosplugin.CRITICAL, certStatus, cert.Subject.CommonName, days, cert.NotAfter)
-				}
-				check.AddResultf(nagiosplugin.OK, certStatus, cert.Subject.CommonName, days, cert.NotAfter)
 			}
 		}
 	}
