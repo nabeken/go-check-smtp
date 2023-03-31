@@ -1,6 +1,6 @@
 # go-check-smtp
 
-[![Build Status](https://travis-ci.org/nabeken/go-check-smtp.svg?branch=master)](https://travis-ci.org/nabeken/go-check-smtp)
+[![Go](https://github.com/nabeken/go-check-smtp/actions/workflows/go.yml/badge.svg)](https://github.com/nabeken/go-check-smtp/actions/workflows/go.yml)
 
 go-check-smtp is a simple drop-in replacement for check\_smtp in nagios-plugins distribution written in Go.
 
