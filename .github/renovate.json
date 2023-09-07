@@ -5,6 +5,8 @@
     "github>nabeken/renovate-config-oss",
     "github>nabeken/renovate-config-oss:recommended",
     "github>nabeken/renovate-config-oss:groupGoVersionUpgrade",
+    "github>nabeken/renovate-config-oss:semanticCommitsFixDeps",
+    "github>nabeken/renovate-config-oss:automergeGoPatch",
     "github>nabeken/renovate-config-oss:groupGithubActions"
   ]
 }
