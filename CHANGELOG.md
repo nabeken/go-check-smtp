@@ -1,0 +1,30 @@
+# Changelog
+
+## [0.1.3](https://github.com/nabeken/go-check-smtp/compare/v0.1.2...v0.1.3) (2024-04-29)
+
+
+### Bug Fixes
+
+* **deps:** update actions/checkout digest to 0ad4b8f ([4b7402c](https://github.com/nabeken/go-check-smtp/commit/4b7402ca85a73bd473c2550a83e16413e81df814))
+* **deps:** update actions/checkout digest to 1d96c77 ([ceb4e7d](https://github.com/nabeken/go-check-smtp/commit/ceb4e7db541ffc0bb2e1e58184a9d5a46b05d70f))
+* **deps:** update actions/checkout digest to 8ade135 ([477459c](https://github.com/nabeken/go-check-smtp/commit/477459c0df738bcd91e098571756be724dda6b3f))
+* **deps:** update actions/checkout digest to b4ffde6 ([bda1fcf](https://github.com/nabeken/go-check-smtp/commit/bda1fcf7d9c0161b6689166216cfc4586506865d))
+* **deps:** update actions/setup-go action to v5 ([4018592](https://github.com/nabeken/go-check-smtp/commit/40185929ea4f459c907274d58edd3d8e03ced175))
+* **deps:** update dependency golang to v1.21.1 ([40de6c4](https://github.com/nabeken/go-check-smtp/commit/40de6c4c77ba6bfeb45b15c82e2625555101b2cb))
+* **deps:** update dependency golang to v1.21.2 ([ce95bae](https://github.com/nabeken/go-check-smtp/commit/ce95bae604124ae7f993ec703f7f583c99111a63))
+* **deps:** update dependency golang to v1.21.3 ([b93de87](https://github.com/nabeken/go-check-smtp/commit/b93de87454ecc2886ab00a550565338be84a6cec))
+* **deps:** update dependency golang to v1.21.4 ([b5bb025](https://github.com/nabeken/go-check-smtp/commit/b5bb0252d74d2a29fcbd7adfda49ce8d221539e8))
+* **deps:** update dependency golang to v1.21.5 ([d5a0c19](https://github.com/nabeken/go-check-smtp/commit/d5a0c1908e7079daf0c1dd9539c5399f60ac4225))
+* **deps:** update dependency golang to v1.21.6 ([d2fe2f1](https://github.com/nabeken/go-check-smtp/commit/d2fe2f1f9cdd25fc541d54d83c1e0fa657d802a8))
+* **deps:** update dependency golang to v1.22.0 ([aff79c1](https://github.com/nabeken/go-check-smtp/commit/aff79c1d82605c8ffd45eb99eafec0f905898d3c))
+* **deps:** update dependency golang to v1.22.1 ([5817116](https://github.com/nabeken/go-check-smtp/commit/58171168faf068a52229a31e9a41b9b98b914a49))
+* **deps:** update dependency golang to v1.22.2 ([e60012f](https://github.com/nabeken/go-check-smtp/commit/e60012f5b8c3e6a2ef550ed4662c17bc87a87a66))
+* **deps:** update google-github-actions/release-please-action action to v4 ([cfd32e5](https://github.com/nabeken/go-check-smtp/commit/cfd32e5d2593f0fb30881294a76e994bb2865274))
+* **deps:** update google-github-actions/release-please-action digest to 4c5670f ([af524b8](https://github.com/nabeken/go-check-smtp/commit/af524b88db4d39f0b37a775c9301dfc31b3e7c75))
+* **deps:** update google-github-actions/release-please-action digest to a37ac6e ([7fb6155](https://github.com/nabeken/go-check-smtp/commit/7fb6155da65581e7cff85537e7f7a7a3ef73b285))
+* **deps:** update google-github-actions/release-please-action digest to cc61a07 ([3973342](https://github.com/nabeken/go-check-smtp/commit/397334258c19522204227b87b2f72b534da39b42))
+* **deps:** update google-github-actions/release-please-action digest to db8f2c6 ([7ada242](https://github.com/nabeken/go-check-smtp/commit/7ada24240ef8c874d686875b4e1e363dfb3a82e7))
+* **deps:** update goreleaser/goreleaser-action action to v5 ([999459e](https://github.com/nabeken/go-check-smtp/commit/999459e10fe30b4e57c2dc377a7fbf42ad6daa3b))
+* **deps:** update nabeken/go-github-apps digest to 0577caf ([d622dc6](https://github.com/nabeken/go-check-smtp/commit/d622dc662c36a0452bc0c680e8fa4e1dda4c328f))
+* **deps:** update nabeken/go-github-apps digest to 6eb3a08 ([65074cc](https://github.com/nabeken/go-check-smtp/commit/65074cca99b16efe22e706a5cf047cc10b78c844))
+* **deps:** update nabeken/go-github-apps digest to fc859a2 ([92df883](https://github.com/nabeken/go-check-smtp/commit/92df883f3b13f627d4d67525c203fc35f82e589e))
