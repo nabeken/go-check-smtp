@@ -1,5 +1,25 @@
 # Changelog
 
+## [0.1.4](https://github.com/nabeken/go-check-smtp/compare/v0.1.3...v0.1.4) (2024-07-16)
+
+
+### Bug Fixes
+
+* **deps:** pin googleapis/release-please-action action to f3969c0 ([76dac25](https://github.com/nabeken/go-check-smtp/commit/76dac250aa95eb03c0f935567a159e15bf4debca))
+* **deps:** update actions/checkout digest to 692973e ([5e6e70e](https://github.com/nabeken/go-check-smtp/commit/5e6e70e74a6a8e9a6de532e6faf843ecbe523ac4))
+* **deps:** update actions/checkout digest to a5ac7e5 ([7f096c8](https://github.com/nabeken/go-check-smtp/commit/7f096c87344653acfb9b74085b4e260235c71654))
+* **deps:** update actions/setup-go digest to 0a12ed9 ([0379af2](https://github.com/nabeken/go-check-smtp/commit/0379af221d3e8284fa243b96fd82322b260d0079))
+* **deps:** update actions/setup-go digest to cdcb360 ([3c50e77](https://github.com/nabeken/go-check-smtp/commit/3c50e77eabd047e85fc4493935a0140069d157f4))
+* **deps:** update dependency golang to v1.22.3 ([2986c4c](https://github.com/nabeken/go-check-smtp/commit/2986c4ccba576f4d4016b4b1e129c36449d00c49))
+* **deps:** update dependency golang to v1.22.4 ([73126fb](https://github.com/nabeken/go-check-smtp/commit/73126fbc23703206b895e1e54fdd6546795177af))
+* **deps:** update dependency golang to v1.22.5 ([638de7c](https://github.com/nabeken/go-check-smtp/commit/638de7c4626cb4cd8dce0dd6b858b5656c77f43b))
+* **deps:** update google-github-actions/release-please-action digest to e4dc86b ([0a74637](https://github.com/nabeken/go-check-smtp/commit/0a74637614dc073d651b56b6c25562b743f09469))
+* **deps:** update googleapis/release-please-action digest to 7987652 ([cad07eb](https://github.com/nabeken/go-check-smtp/commit/cad07eb6d9bbe65332e258a3f60fd88d3f31a3e6))
+* **deps:** update goreleaser/goreleaser-action action to v6 ([d53d4bb](https://github.com/nabeken/go-check-smtp/commit/d53d4bbb077a0dac29c536492cee5623efc922cf))
+* **deps:** update goreleaser/goreleaser-action digest to 5742e2a ([ed5324e](https://github.com/nabeken/go-check-smtp/commit/ed5324e1683ee4f5976e84cabf800632d22d342b))
+* **deps:** update module github.com/jessevdk/go-flags to v1.6.1 ([7769b6b](https://github.com/nabeken/go-check-smtp/commit/7769b6b6d4d696befd56022fd9a9f0391000922f))
+* **deps:** update nabeken/go-github-apps digest to ad9874f ([fb09c89](https://github.com/nabeken/go-check-smtp/commit/fb09c89bd5b1bb5b497181c5e592fa0b6acce061))
+
 ## [0.1.3](https://github.com/nabeken/go-check-smtp/compare/v0.1.2...v0.1.3) (2024-04-29)
 
 
