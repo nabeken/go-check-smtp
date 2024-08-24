@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.1.5](https://github.com/nabeken/go-check-smtp/compare/v0.1.4...v0.1.5) (2024-08-24)
+
+
+### Bug Fixes
+
+* **deps:** update dependency golang to v1.22.6 ([6130db4](https://github.com/nabeken/go-check-smtp/commit/6130db4053fbad90b8dd6a9a019896edea9b85c4))
+* **deps:** update dependency golang to v1.23.0 ([2aad5a6](https://github.com/nabeken/go-check-smtp/commit/2aad5a6ddb18667e426ad486215b84b8b2d8cd69))
+* **deps:** update nabeken/go-github-apps digest to afd4a1d ([fb0e1f2](https://github.com/nabeken/go-check-smtp/commit/fb0e1f2cc63ffb711506d7273ab8c99247d91ca3))
+
 ## [0.1.4](https://github.com/nabeken/go-check-smtp/compare/v0.1.3...v0.1.4) (2024-07-16)
 
 
