@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.1.6](https://github.com/nabeken/go-check-smtp/compare/v0.1.5...v0.1.6) (2024-12-21)
+
+
+### Bug Fixes
+
+* **deps:** pin actions/create-github-app-token action to 31c86eb ([5146593](https://github.com/nabeken/go-check-smtp/commit/514659374d78f97ee7dd1add715635af78322a3c))
+* **deps:** update actions/checkout digest to 11bd719 ([cd4bdf9](https://github.com/nabeken/go-check-smtp/commit/cd4bdf98718cc36effa5f8ee10f16a6b0b7ff223))
+* **deps:** update actions/checkout digest to eef6144 ([871ca42](https://github.com/nabeken/go-check-smtp/commit/871ca42480765efa1b541b766f35ee6f37f60907))
+* **deps:** update actions/create-github-app-token digest to 3378cda ([86baf5c](https://github.com/nabeken/go-check-smtp/commit/86baf5ced73f336998b94bec12d5f468b723df22))
+* **deps:** update actions/create-github-app-token digest to 5d869da ([c7a22a5](https://github.com/nabeken/go-check-smtp/commit/c7a22a5e825ea12165ec1cbe6ee61cc5ae395831))
+* **deps:** update actions/setup-go digest to 41dfa10 ([3b9fda6](https://github.com/nabeken/go-check-smtp/commit/3b9fda62c7082f9ff2506481f0ae169cbb641b47))
+* **deps:** update dependency golang to v1.23.1 ([e0f9c9f](https://github.com/nabeken/go-check-smtp/commit/e0f9c9f304c4460a7543973182e77f1e54693741))
+* **deps:** update dependency golang to v1.23.2 ([997b4da](https://github.com/nabeken/go-check-smtp/commit/997b4da49ed1222ccc8392042e7450e4ce672860))
+* **deps:** update dependency golang to v1.23.3 ([14646e2](https://github.com/nabeken/go-check-smtp/commit/14646e2f038ea57f64969d9c43b337c13e573e37))
+* **deps:** update dependency golang to v1.23.4 ([#83](https://github.com/nabeken/go-check-smtp/issues/83)) ([6b99d83](https://github.com/nabeken/go-check-smtp/commit/6b99d834808ae0753395800cd7445d0edad10145))
+* **deps:** update github-actions ([b8c91f6](https://github.com/nabeken/go-check-smtp/commit/b8c91f6b3f69eed8129d7a9cffd1f6fbd5770d9c))
+* **deps:** update goreleaser/goreleaser-action digest to 9ed2f89 ([a20c9f5](https://github.com/nabeken/go-check-smtp/commit/a20c9f5758ccd9c4c2e96b1826a7feaec04760ab))
+
 ## [0.1.5](https://github.com/nabeken/go-check-smtp/compare/v0.1.4...v0.1.5) (2024-08-24)
 
 
