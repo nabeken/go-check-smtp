@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.8](https://github.com/nabeken/go-check-smtp/compare/v0.1.7...v0.1.8) (2025-02-11)
+
+
+### Bug Fixes
+
+* **deps:** update goreleaser/goreleaser-action digest to 90a3faa ([a1ab2e4](https://github.com/nabeken/go-check-smtp/commit/a1ab2e47c0b1dcdf5b019cde340d35e7a9633daa))
+
 ## [0.1.7](https://github.com/nabeken/go-check-smtp/compare/v0.1.6...v0.1.7) (2025-02-09)
 
 
