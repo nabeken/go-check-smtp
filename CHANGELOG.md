@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.1.8](https://github.com/nabeken/go-check-smtp/compare/v0.1.7...v0.1.8) (2025-03-07)
+
+
+### Bug Fixes
+
+* **deps:** update actions/create-github-app-token digest to 0d56448 ([#96](https://github.com/nabeken/go-check-smtp/issues/96)) ([32ddd84](https://github.com/nabeken/go-check-smtp/commit/32ddd84adb78bc7fe214e6d08b1a5fbffbc271e0))
+* **deps:** update actions/create-github-app-token digest to 21cfef2 ([#97](https://github.com/nabeken/go-check-smtp/issues/97)) ([dbcac64](https://github.com/nabeken/go-check-smtp/commit/dbcac6490e5d6cf362ce10c817ea0466540ae866))
+* **deps:** update dependency go to v1.24.1 ([5c9f530](https://github.com/nabeken/go-check-smtp/commit/5c9f5304c5073e08515da94b5a617ab92d49c868))
+* **deps:** update dependency go to v1.24.1 ([d765a32](https://github.com/nabeken/go-check-smtp/commit/d765a32b15d3982cf190b9498ab2036511576d21))
+* **deps:** update dependency golang to v1.24.1 ([4d73177](https://github.com/nabeken/go-check-smtp/commit/4d73177f37de57dbbef5ec2e4302907b8680bad4))
+* **deps:** update dependency golang to v1.24.1 ([1ba6b0f](https://github.com/nabeken/go-check-smtp/commit/1ba6b0fe44b9322ef1ef2efe4e0504e57cba71f0))
+* **deps:** update googleapis/release-please-action digest to 26ac09b ([#98](https://github.com/nabeken/go-check-smtp/issues/98)) ([f767bd5](https://github.com/nabeken/go-check-smtp/commit/f767bd5850ac5c2c9a0f636c98bf72fa9d3de05f))
+* **deps:** update googleapis/release-please-action digest to a02a34c ([#99](https://github.com/nabeken/go-check-smtp/issues/99)) ([e156015](https://github.com/nabeken/go-check-smtp/commit/e156015f4e20885ff7d6ec39f5a172a0c8cbd358))
+* **deps:** update goreleaser/goreleaser-action digest to 90a3faa ([8a50642](https://github.com/nabeken/go-check-smtp/commit/8a5064279dbab4b1f8010142e6ab771dd8e17f6c))
+* **deps:** update goreleaser/goreleaser-action digest to 90a3faa ([a1ab2e4](https://github.com/nabeken/go-check-smtp/commit/a1ab2e47c0b1dcdf5b019cde340d35e7a9633daa))
+
 ## [0.1.7](https://github.com/nabeken/go-check-smtp/compare/v0.1.6...v0.1.7) (2025-02-09)
 
 
