@@ -2,8 +2,8 @@ github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/jessevdk/go-flags v1.6.1 h1:Cvu5U8UGrLay1rZfv/zP7iLpSHGUZ/Ou68T0iX1bBK4=
 github.com/jessevdk/go-flags v1.6.1/go.mod h1:Mk8T1hIAWpOiJiHa9rJASDK2UGWji0EuPGBnNLMooyc=
-github.com/nabeken/nagiosplugin/v2 v2.0.0 h1:CEXq1Zx52YPi0Rayii/rAEaXFWjYiLkXutWAT7SlW2I=
-github.com/nabeken/nagiosplugin/v2 v2.0.0/go.mod h1:eUc5OUO+zZhigOhHkvYEYffndQU4OEZVHFBuGZsA1EQ=
+github.com/nabeken/nagiosplugin/v2 v2.0.1 h1:XflpWaLnuMCaHAlUFMKGH1TC3Zi2/7d75scvt9kuSvc=
+github.com/nabeken/nagiosplugin/v2 v2.0.1/go.mod h1:eUc5OUO+zZhigOhHkvYEYffndQU4OEZVHFBuGZsA1EQ=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/stretchr/testify v1.10.0 h1:Xv5erBjTwe/5IxqUQTdXv5kgmIvbHo3QQyRwhJsOfJA=
