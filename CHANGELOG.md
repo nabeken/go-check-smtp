@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.1.9](https://github.com/nabeken/go-check-smtp/compare/v0.1.8...v0.1.9) (2025-03-27)
+
+
+### Bug Fixes
+
+* **deps:** update actions/create-github-app-token digest to af35eda ([#103](https://github.com/nabeken/go-check-smtp/issues/103)) ([1f670d8](https://github.com/nabeken/go-check-smtp/commit/1f670d8e5b0f4277939ddc1e30cfb4a79d6be059))
+* **deps:** update actions/create-github-app-token digest to d72941d ([#104](https://github.com/nabeken/go-check-smtp/issues/104)) ([dd251a7](https://github.com/nabeken/go-check-smtp/commit/dd251a761e5c7cb43699bc143a739f6bdca086e2))
+* **deps:** update actions/setup-go digest to 0aaccfd ([#102](https://github.com/nabeken/go-check-smtp/issues/102)) ([4391ee4](https://github.com/nabeken/go-check-smtp/commit/4391ee4c2f57b463d5d3a9d455bfd5aa8780a0bd))
+* **deps:** update module github.com/nabeken/nagiosplugin/v2 to v2.0.1 ([d13e8d7](https://github.com/nabeken/go-check-smtp/commit/d13e8d7d2165b646e2ac09db236ae48e59048f4d))
+* **deps:** update module github.com/nabeken/nagiosplugin/v2 to v2.0.1 ([df7fe8e](https://github.com/nabeken/go-check-smtp/commit/df7fe8ec07cb6997f62e91d264c60fb19e42d27c))
+
 ## [0.1.8](https://github.com/nabeken/go-check-smtp/compare/v0.1.7...v0.1.8) (2025-03-07)
 
 
