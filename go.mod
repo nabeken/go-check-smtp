@@ -2,7 +2,7 @@ module github.com/nabeken/go-check-smtp
 
 go 1.23.5
 
-toolchain go1.24.6
+toolchain go1.25.0
 
 require (
 	github.com/jessevdk/go-flags v1.6.1
