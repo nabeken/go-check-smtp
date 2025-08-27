@@ -1,5 +1,46 @@
 # Changelog
 
+## [0.1.9](https://github.com/nabeken/go-check-smtp/compare/v0.1.8...v0.1.9) (2025-08-27)
+
+
+### Bug Fixes
+
+* **deps:** update actions/checkout action to v5 ([#123](https://github.com/nabeken/go-check-smtp/issues/123)) ([a4729d8](https://github.com/nabeken/go-check-smtp/commit/a4729d854bca21247b1ffb472f6f3c246f52353e))
+* **deps:** update actions/checkout digest to 08eba0b ([#122](https://github.com/nabeken/go-check-smtp/issues/122)) ([4f00d76](https://github.com/nabeken/go-check-smtp/commit/4f00d76c9697fa320f03a9eac6930cf980b127aa))
+* **deps:** update actions/create-github-app-token action to v2 ([a544b29](https://github.com/nabeken/go-check-smtp/commit/a544b29fdf6299a1f4fb552a7e12a0568ec118ed))
+* **deps:** update actions/create-github-app-token action to v2 ([f4b5794](https://github.com/nabeken/go-check-smtp/commit/f4b5794581762431aa2f6a40e8ab87bb0e6d1794))
+* **deps:** update actions/create-github-app-token digest to 0f859bf ([#121](https://github.com/nabeken/go-check-smtp/issues/121)) ([90916c7](https://github.com/nabeken/go-check-smtp/commit/90916c71b3b8dcc0fb46d25109874da81bd7f568))
+* **deps:** update actions/create-github-app-token digest to 30bf625 ([#109](https://github.com/nabeken/go-check-smtp/issues/109)) ([684961f](https://github.com/nabeken/go-check-smtp/commit/684961f76ba9029d127f43527219fed1df54edf7))
+* **deps:** update actions/create-github-app-token digest to a8d6161 ([#124](https://github.com/nabeken/go-check-smtp/issues/124)) ([33d1f25](https://github.com/nabeken/go-check-smtp/commit/33d1f25549b534b078fbbf770d5395c8a20e6f57))
+* **deps:** update actions/create-github-app-token digest to af35eda ([#103](https://github.com/nabeken/go-check-smtp/issues/103)) ([1f670d8](https://github.com/nabeken/go-check-smtp/commit/1f670d8e5b0f4277939ddc1e30cfb4a79d6be059))
+* **deps:** update actions/create-github-app-token digest to d72941d ([#104](https://github.com/nabeken/go-check-smtp/issues/104)) ([dd251a7](https://github.com/nabeken/go-check-smtp/commit/dd251a761e5c7cb43699bc143a739f6bdca086e2))
+* **deps:** update actions/create-github-app-token digest to db3cdf4 ([#110](https://github.com/nabeken/go-check-smtp/issues/110)) ([ab14baf](https://github.com/nabeken/go-check-smtp/commit/ab14baf2b1456c563488bcf915c501a1dba8cae1))
+* **deps:** update actions/create-github-app-token digest to df432ce ([#111](https://github.com/nabeken/go-check-smtp/issues/111)) ([9a615d6](https://github.com/nabeken/go-check-smtp/commit/9a615d6c730cb4737214a3fb906795a5889e846c))
+* **deps:** update actions/setup-go digest to 0aaccfd ([#102](https://github.com/nabeken/go-check-smtp/issues/102)) ([4391ee4](https://github.com/nabeken/go-check-smtp/commit/4391ee4c2f57b463d5d3a9d455bfd5aa8780a0bd))
+* **deps:** update actions/setup-go digest to d35c59a ([#114](https://github.com/nabeken/go-check-smtp/issues/114)) ([a9a61a3](https://github.com/nabeken/go-check-smtp/commit/a9a61a3f5bc52eaad1dc847372d4c13e16854c91))
+* **deps:** update dependency go to v1.24.2 ([#106](https://github.com/nabeken/go-check-smtp/issues/106)) ([978ce31](https://github.com/nabeken/go-check-smtp/commit/978ce3186312ad69ccd5f297fc69799522910211))
+* **deps:** update dependency go to v1.24.3 ([#112](https://github.com/nabeken/go-check-smtp/issues/112)) ([636472e](https://github.com/nabeken/go-check-smtp/commit/636472e268323b390aea96a3cff0c70f609396d5))
+* **deps:** update dependency go to v1.24.4 ([#115](https://github.com/nabeken/go-check-smtp/issues/115)) ([9593e48](https://github.com/nabeken/go-check-smtp/commit/9593e48f2edf7d8f08885a229053fa251db0ce70))
+* **deps:** update dependency go to v1.24.5 ([#117](https://github.com/nabeken/go-check-smtp/issues/117)) ([401117e](https://github.com/nabeken/go-check-smtp/commit/401117e30cff71d585873294a780cdefd0c0be45))
+* **deps:** update dependency go to v1.24.6 ([#119](https://github.com/nabeken/go-check-smtp/issues/119)) ([2fb5d3e](https://github.com/nabeken/go-check-smtp/commit/2fb5d3e7cf926e115fed1a213f32e3600a307c81))
+* **deps:** update dependency go to v1.25.0 ([e0af9b2](https://github.com/nabeken/go-check-smtp/commit/e0af9b209b1e26254bcddf37abc3f411c27d5778))
+* **deps:** update dependency go to v1.25.0 ([98b98ce](https://github.com/nabeken/go-check-smtp/commit/98b98cefba312ac3750994e080c6d64670a12708))
+* **deps:** update dependency golang to v1.24.2 ([#107](https://github.com/nabeken/go-check-smtp/issues/107)) ([cf312f1](https://github.com/nabeken/go-check-smtp/commit/cf312f18764b4ff9994d95d308ab5baccee4626f))
+* **deps:** update dependency golang to v1.24.3 ([#113](https://github.com/nabeken/go-check-smtp/issues/113)) ([83daadd](https://github.com/nabeken/go-check-smtp/commit/83daadd0f4f1c8011468be2630e610d67acfdac2))
+* **deps:** update dependency golang to v1.24.4 ([#116](https://github.com/nabeken/go-check-smtp/issues/116)) ([788bdc4](https://github.com/nabeken/go-check-smtp/commit/788bdc407aa5a8bdaed5f1ae20d35cf6b36b5507))
+* **deps:** update dependency golang to v1.24.5 ([#118](https://github.com/nabeken/go-check-smtp/issues/118)) ([6eedd05](https://github.com/nabeken/go-check-smtp/commit/6eedd05a80ff633254d9d713b607b200595cd178))
+* **deps:** update dependency golang to v1.24.6 ([#120](https://github.com/nabeken/go-check-smtp/issues/120)) ([b628615](https://github.com/nabeken/go-check-smtp/commit/b628615a356b004a2919528bab397d08140c424b))
+* **deps:** update dependency golang to v1.25.0 ([1f6c70f](https://github.com/nabeken/go-check-smtp/commit/1f6c70f8bc0427daf99f14c1bd646ee2ce2e47aa))
+* **deps:** update dependency golang to v1.25.0 ([31858fe](https://github.com/nabeken/go-check-smtp/commit/31858fe7fb6d2d56b0d474632e70e2b6ec059a05))
+* **deps:** update googleapis/release-please-action digest to c2a5a2b ([#130](https://github.com/nabeken/go-check-smtp/issues/130)) ([9d6fe8b](https://github.com/nabeken/go-check-smtp/commit/9d6fe8bb439fa17f5b3261fa38b05e424edb4fff))
+* **deps:** update goreleaser/goreleaser-action digest to 9c156ee ([9959fc8](https://github.com/nabeken/go-check-smtp/commit/9959fc8aab30825af15143bba8d68b43628b9abf))
+* **deps:** update goreleaser/goreleaser-action digest to 9c156ee ([00aa8e2](https://github.com/nabeken/go-check-smtp/commit/00aa8e2d48539d7035daa5194e00a2db6449aec0))
+* **deps:** update goreleaser/goreleaser-action digest to e435ccd ([a467d38](https://github.com/nabeken/go-check-smtp/commit/a467d382e6f823e7daeb01cb84bb9f7de4247d97))
+* **deps:** update goreleaser/goreleaser-action digest to e435ccd ([65e2196](https://github.com/nabeken/go-check-smtp/commit/65e219656938564b03c130c31f11d1c722f7addd))
+* **deps:** update goreleaser/goreleaser-action digest to e435ccd ([#127](https://github.com/nabeken/go-check-smtp/issues/127)) ([8f7e0ad](https://github.com/nabeken/go-check-smtp/commit/8f7e0ada39a8ace4d7b7abf5cddfeeeeccecd632))
+* **deps:** update module github.com/nabeken/nagiosplugin/v2 to v2.0.1 ([d13e8d7](https://github.com/nabeken/go-check-smtp/commit/d13e8d7d2165b646e2ac09db236ae48e59048f4d))
+* **deps:** update module github.com/nabeken/nagiosplugin/v2 to v2.0.1 ([df7fe8e](https://github.com/nabeken/go-check-smtp/commit/df7fe8ec07cb6997f62e91d264c60fb19e42d27c))
+
 ## [0.1.8](https://github.com/nabeken/go-check-smtp/compare/v0.1.7...v0.1.8) (2025-03-07)
 
 
