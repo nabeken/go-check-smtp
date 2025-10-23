@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.1.10](https://github.com/nabeken/go-check-smtp/compare/v0.1.9...v0.1.10) (2025-10-23)
+
+
+### Bug Fixes
+
+* **deps:** update actions/create-github-app-token digest to 6701853 ([#136](https://github.com/nabeken/go-check-smtp/issues/136)) ([89cc8bf](https://github.com/nabeken/go-check-smtp/commit/89cc8bf534b34cf7776cb72713a41441d58a995b))
+* **deps:** update actions/create-github-app-token digest to def152b ([#135](https://github.com/nabeken/go-check-smtp/issues/135)) ([9acd8e7](https://github.com/nabeken/go-check-smtp/commit/9acd8e791e667cda417e5c6545f9d1938f4bd06d))
+* **deps:** update actions/setup-go action to v6 ([#134](https://github.com/nabeken/go-check-smtp/issues/134)) ([63de5ef](https://github.com/nabeken/go-check-smtp/commit/63de5efa18a1e195212a405883d4d3ddc8ff457c))
+* **deps:** update dependency go to v1.25.1 ([#131](https://github.com/nabeken/go-check-smtp/issues/131)) ([d5b5536](https://github.com/nabeken/go-check-smtp/commit/d5b55361df2608afa2666e92713eb4cc75c5fd1d))
+* **deps:** update dependency go to v1.25.2 ([#137](https://github.com/nabeken/go-check-smtp/issues/137)) ([d261927](https://github.com/nabeken/go-check-smtp/commit/d261927e8f226ec291fb4a7497463d053a8b083f))
+* **deps:** update dependency go to v1.25.3 ([#139](https://github.com/nabeken/go-check-smtp/issues/139)) ([d7deceb](https://github.com/nabeken/go-check-smtp/commit/d7deceb26a6eafd38b90f170e3a680f9bddb1429))
+* **deps:** update dependency golang to v1.25.1 ([#132](https://github.com/nabeken/go-check-smtp/issues/132)) ([6372946](https://github.com/nabeken/go-check-smtp/commit/637294686a986fe15bb61ee53c163a71c7c8b515))
+* **deps:** update dependency golang to v1.25.2 ([#138](https://github.com/nabeken/go-check-smtp/issues/138)) ([50403ff](https://github.com/nabeken/go-check-smtp/commit/50403ff3da3e1c81c0cf46f215d9ab533c31101d))
+* **deps:** update dependency golang to v1.25.3 ([#140](https://github.com/nabeken/go-check-smtp/issues/140)) ([8867a0b](https://github.com/nabeken/go-check-smtp/commit/8867a0b0d65ec61fc91a259eb611fab201401e27))
+* **deps:** update googleapis/release-please-action digest to 16a9c90 ([#141](https://github.com/nabeken/go-check-smtp/issues/141)) ([3d9a8ac](https://github.com/nabeken/go-check-smtp/commit/3d9a8aca53a2c040feba57b86811d081ac7484a6))
+
 ## [0.1.9](https://github.com/nabeken/go-check-smtp/compare/v0.1.8...v0.1.9) (2025-08-27)
 
 
