@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.11](https://github.com/nabeken/go-check-smtp/compare/v0.1.10...v0.1.11) (2026-05-13)
+
+
+### Bug Fixes
+
+* **deps:** update actions/create-github-app-token digest to bcd2ba4 ([#174](https://github.com/nabeken/go-check-smtp/issues/174)) ([20f97b3](https://github.com/nabeken/go-check-smtp/commit/20f97b392ba49d831a43450df8fa6bad303c3434))
+* **deps:** update go to v1.26.3 ([#172](https://github.com/nabeken/go-check-smtp/issues/172)) ([ee87425](https://github.com/nabeken/go-check-smtp/commit/ee874253c2d62330ae0795e441ece1b13456ab0a))
+
 ## [0.1.10](https://github.com/nabeken/go-check-smtp/compare/v0.1.9...v0.1.10) (2026-04-29)
 
 
