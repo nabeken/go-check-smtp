@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.1.11](https://github.com/nabeken/go-check-smtp/compare/v0.1.10...v0.1.11) (2026-08-13)
+
+
+### Bug Fixes
+
+* **deps:** update actions/checkout digest to 3d3c42e ([#182](https://github.com/nabeken/go-check-smtp/issues/182)) ([0eb48e1](https://github.com/nabeken/go-check-smtp/commit/0eb48e1c6a2d4982cd004869bb27a9aa96648f27))
+* **deps:** update actions/create-github-app-token digest to bcd2ba4 ([#174](https://github.com/nabeken/go-check-smtp/issues/174)) ([20f97b3](https://github.com/nabeken/go-check-smtp/commit/20f97b392ba49d831a43450df8fa6bad303c3434))
+* **deps:** update actions/setup-go action to v7 ([#181](https://github.com/nabeken/go-check-smtp/issues/181)) ([7d8e3eb](https://github.com/nabeken/go-check-smtp/commit/7d8e3eb7152203d255610a4dd3bc974c6a15c1d6))
+* **deps:** update actions/setup-go digest to 924ae3a ([#178](https://github.com/nabeken/go-check-smtp/issues/178)) ([f89f48b](https://github.com/nabeken/go-check-smtp/commit/f89f48b33e55b5f4fb7c28d5ec580162127c35af))
+* **deps:** update github-actions ([#175](https://github.com/nabeken/go-check-smtp/issues/175)) ([38ce7e7](https://github.com/nabeken/go-check-smtp/commit/38ce7e7aeef887a1d55eef5e641cee83f8d76b78))
+* **deps:** update github-actions to v7 ([#177](https://github.com/nabeken/go-check-smtp/issues/177)) ([ac21eea](https://github.com/nabeken/go-check-smtp/commit/ac21eea215aa48dd561eac4397f10f3cf7b31054))
+* **deps:** update go to v1.26.3 ([#172](https://github.com/nabeken/go-check-smtp/issues/172)) ([ee87425](https://github.com/nabeken/go-check-smtp/commit/ee874253c2d62330ae0795e441ece1b13456ab0a))
+* **deps:** update go to v1.26.4 ([#176](https://github.com/nabeken/go-check-smtp/issues/176)) ([468aba8](https://github.com/nabeken/go-check-smtp/commit/468aba8d3dec62e26dc04c0db933ef77e130af46))
+* **deps:** update go to v1.26.5 ([#180](https://github.com/nabeken/go-check-smtp/issues/180)) ([f8365c3](https://github.com/nabeken/go-check-smtp/commit/f8365c35b61e30cb33a8ba9f2420597a51b025c2))
+* **deps:** update go to v1.26.6 ([#183](https://github.com/nabeken/go-check-smtp/issues/183)) ([6fce616](https://github.com/nabeken/go-check-smtp/commit/6fce616fcd444ebe601beb3e8a2e7cd82efbbe1b))
+* **deps:** update goreleaser/goreleaser-action digest to f06c13b ([#179](https://github.com/nabeken/go-check-smtp/issues/179)) ([ec80730](https://github.com/nabeken/go-check-smtp/commit/ec80730663f6c2cf925ba09f4abbc88b1410de40))
+
 ## [0.1.10](https://github.com/nabeken/go-check-smtp/compare/v0.1.9...v0.1.10) (2026-04-29)
 
 
