@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.12](https://github.com/nabeken/go-check-smtp/compare/v0.1.11...v0.1.12) (2026-11-25)
+
+
+### Bug Fixes
+
+* **deps:** update module github.com/nabeken/nagiosplugin/v2 to v2.0.3 ([#189](https://github.com/nabeken/go-check-smtp/issues/189)) ([a0deae9](https://github.com/nabeken/go-check-smtp/commit/a0deae9868bc0d44f6d0f995a41779b1c95ec12b))
+
 ## [0.1.11](https://github.com/nabeken/go-check-smtp/compare/v0.1.10...v0.1.11) (2026-11-18)
 
 
